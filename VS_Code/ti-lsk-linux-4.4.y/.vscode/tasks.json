@@ -1,0 +1,38 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    //"command": "make",
+    "command": "bash",
+    "isShellCommand": true,
+    "args": [ "-c" ],
+    "options": {
+        "env": {            
+            "LOADADDR": "0x82000000"            
+        }
+    },
+    "showOutput": "always",
+    "echoCommand": true,
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "build",
+            "isBuildCommand": true,            
+            "args": [
+                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; make -j8 uImage"
+            ]
+        },
+        {
+            "taskName": "clean",
+            "args": [
+                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; make clean"
+            ]
+        },
+        {
+            "taskName": "modules",
+            "args": [
+                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; make -j8 modules"
+            ]
+        }
+    ]    
+}

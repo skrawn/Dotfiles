@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    //"command": "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi && cmake -H. -BDebug && cd Debug && make",
+    //"command": "/bin/bash source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi",
+    //"command": "cd ${workspaceRoot}; cmake -H. -BDebug",    
+    "command": "bash",    
+    "isShellCommand": true,
+    "args": [ "-c" ],    
+    "showOutput": "always",
+    "echoCommand": true,          
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "build",     
+            "isBuildCommand": true,            
+            "args": [
+                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cmake -H. -BDebug && cd Debug && make"
+            ]
+        },
+        {
+            "taskName": "clean",
+            "args": [
+                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cd Debug; make clean"
+            ]
+        }
+    ]
+}

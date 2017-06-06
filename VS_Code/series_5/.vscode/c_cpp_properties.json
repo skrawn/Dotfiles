@@ -1,0 +1,43 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/opt/poky/2.2.1/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
+                "/opt/poky/2.2.1/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/include",
+                "${workspaceRoot}/controller/application",
+                "${workspaceRoot}/controller/sensors",
+                "${workspaceRoot}/controller/signalAnalysis",
+                "${workspaceRoot}/controller/utils",
+                "${workspaceRoot}/main",
+                "${workspaceRoot}/instrument/model/iniData",
+                "${workspaceRoot}/instrument/model/testData",
+                "${workspaceRoot}/instrument/model/spectrumData",
+                "${workspaceRoot}/instrument/view/ethernet",
+                "${workspaceRoot}/instrument/view/gps",
+                "${workspaceRoot}/instrument/view/hardware",
+                "${workspaceRoot}/instrument/view/usb",
+                "${workspaceRoot}/instrument/view/wifi"
+            ],
+            "browse": {
+                "path": [
+                    "/opt/poky/2.2.1/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
+                    "/opt/poky/2.2.1/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/include",
+                    "${workspaceRoot}/controller/application",
+                    "${workspaceRoot}/controller/sensors",
+                    "${workspaceRoot}/controller/signalAnalysis",
+                    "${workspaceRoot}/controller/utils",
+                    "${workspaceRoot}/main",
+                    "${workspaceRoot}/instrument/model/iniData",
+                    "${workspaceRoot}/instrument/model/testData",
+                    "${workspaceRoot}/instrument/model/spectrumData",
+                    "${workspaceRoot}/instrument/view/ethernet",
+                    "${workspaceRoot}/instrument/view/gps",
+                    "${workspaceRoot}/instrument/view/hardware",
+                    "${workspaceRoot}/instrument/view/usb",
+                    "${workspaceRoot}/instrument/view/wifi"
+                ]
+            }
+        }
+    ]
+}
