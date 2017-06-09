@@ -2,9 +2,6 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    //"command": "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi && cmake -H. -BDebug && cd Debug && make",
-    //"command": "/bin/bash source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi",
-    //"command": "cd ${workspaceRoot}; cmake -H. -BDebug",    
     "command": "bash",    
     "isShellCommand": true,
     "args": [ "-c" ],    
@@ -16,7 +13,7 @@
             "taskName": "build",     
             "isBuildCommand": true,            
             "args": [
-                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cmake -H. -BDebug && cd Debug && make"
+                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cd Debug && make"
             ]
         },
         {
@@ -24,6 +21,24 @@
             "args": [
                 "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cd Debug; make clean"
             ]
+        },
+        {
+            "taskName": "predebug",
+            "args": [
+                "${workspaceRoot}/.vscode/predebug.sh"
+            ]
         }
-    ]
+    ],
+    "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": ["relative", "${workspaceRoot}"],
+        "pattern": {
+            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5
+        }
+    }
 }
