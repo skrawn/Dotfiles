@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    //"cmake.buildDirectory": "${workspaceRoot}/Debug",
+    "cmake.buildDirectory": "${workspaceRoot}/Debug",
     "cmake.useCMakeServer": false,
     "cmake.environment": {
         "AR":"/opt/poky/2.2.1/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ar",
@@ -62,6 +62,5 @@
         "-DCMAKE_BUILD_TYPE=DEBUG",
         "-DCMAKE_VERBOSE_MAKEFILE=1",
         "-Wno-dev"
-    ],
-    "cmake.buildDirectory": "${workspaceRoot}/Debug"
+    ],    
 }
