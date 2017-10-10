@@ -15,8 +15,8 @@
             "externalConsole": true,
             "linux": {                
                 "MIMode": "gdb",
-                "miDebuggerPath": "/opt/poky/2.2.1/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb",
-                "miDebuggerServerAddress": "10.85.4.86:2345",
+                "miDebuggerPath": "/opt/poky/2.2.2/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb",
+                "miDebuggerServerAddress": "10.85.4.95:2345",
                 "setupCommands": [
                     {                        
                         "description": "Enable pretty-printing for gdb",

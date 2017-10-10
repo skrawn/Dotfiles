@@ -13,13 +13,13 @@
             "taskName": "build",     
             "isBuildCommand": true,            
             "args": [
-                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cd Debug && make"
+                "source /opt/poky/2.2.2/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cd Debug && make"
             ]
         },
         {
             "taskName": "clean",
             "args": [
-                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cd Debug; make clean"
+                "source /opt/poky/2.2.2/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cd Debug; make clean"
             ]
         },
         {

@@ -1,19 +1,17 @@
 {
     "configurations": [
-        {                        
+        {
             "name": "Linux",
-            "defines": [
-                
-            ],
+            "defines": [],
             "includePath": [
-                "/opt/poky/2.2.1/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
-                "/opt/poky/2.2.1/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include/asm-generic",
-                "/opt/poky/2.2.1/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/include",
+                "/opt/poky/2.2.2/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
+                "/opt/poky/2.2.2/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include/asm-generic",
+                "/opt/poky/2.2.2/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/include",
                 "${workspaceRoot}/controller/application",
                 "${workspaceRoot}/controller/sensors",
                 "${workspaceRoot}/controller/signalAnalysis",
                 "${workspaceRoot}/controller/utils",
-                "${workspaceRoot}/main",                
+                "${workspaceRoot}/main",
                 "${workspaceRoot}/model/files",
                 "${workspaceRoot}/model/iniData",
                 "${workspaceRoot}/model/testData",
@@ -30,13 +28,15 @@
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": "${workspaceRoot}/.vscode/symboldb",                
+                "databaseFilename": "${workspaceRoot}/.vscode/symboldb",
                 "path": [
-                    "/opt/poky/2.2.1/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",                    
-                    "/opt/poky/2.2.1/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/include",
+                    "/opt/poky/2.2.2/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
+                    "/opt/poky/2.2.2/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/include",
                     "${workspaceRoot}"
                 ]
-            }
+            },
+            "intelliSenseMode": "clang-x64"
         }
-    ]
+    ],
+    "version": 3
 }
