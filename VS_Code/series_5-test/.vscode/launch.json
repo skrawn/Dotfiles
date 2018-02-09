@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Legacy Tests",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${workspaceFolder}/tests/legacy/test_setup_validation_sanity.py",
+            "cwd": "${workspaceFolder}/tests/legacy",
+            "env": {
+                "FS5_SERVER_URL": "http://10.1.1.11"
+            },
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+                "RedirectOutput"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Enhanced API Tests",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "/home/sdonohue/virtualenvs/series_5-test_json/lib/python3.6/site-packages/behave/__main__.py",
+            "cwd": "${workspaceFolder}/tests/REST/features",
+            "env": {
+                "FS5_SERVER_URL": "http://10.1.1.11"
+            },
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+                "RedirectOutput"
+            ]
+        }
+
+    ]
+}
