@@ -5,22 +5,51 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run Legacy Tests",
+            "name": "Run Legacy Sanity Tests",
             "type": "python",
             "request": "launch",
-            "stopOnEntry": true,
             "pythonPath": "${config:python.pythonPath}",
-            "program": "${workspaceFolder}/tests/legacy/test_setup_validation_sanity.py",
+            "module": "pytest",
             "cwd": "${workspaceFolder}/tests/legacy",
             "env": {
                 "FS5_SERVER_URL": "http://10.1.1.11"
             },
             "envFile": "${workspaceFolder}/.env",
             "debugOptions": [
-                "RedirectOutput"
+            ],
+            "args": [
+                "test_setup_validation_sanity.py", "--junitxml=reports/report-setup-sanity.xml",
+                "test_version_cmd_sanity.py", "--junitxml=reports/report-version-sanity",
+                "test_acquire_cmd_sanity.py", "--junitxml=reports/report-aquire-sanity.xml",
+                "test_collect_cmd_sanity.py", "--junitxml=reports/report-collect-sanity.xml"
+
             ],
             "console": "integratedTerminal"
         },
+        {
+            "name": "Run Legacy Regression Tests",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
+            "module": "pytest",
+            "cwd": "${workspaceFolder}/tests/legacy",
+            "env": {
+                "FS5_SERVER_URL": "http://10.1.1.11"
+            },
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+            ],
+            "args": [
+                "test_scenarios_regression.py", "--junitxml=reports/report-scenarios-regression.xml",
+                "test_abort_cmd_regression.py", "--junitxml=reports/report-abort-regression.xml",
+                "test_acquire_cmd_regression.py", "--junitxml=reports/report-acquire-regression.xml",
+                "test_collect_cmd_regression.py", "--junitxml=reports/report-collect-regression.xml",
+                "test_ic_cmd_regression.py", "--junitxml=reports/report-ic-cmd-regression.xml",
+                "test_init_cmd_regression.py", "--junitxml=reports/report-init-cmd-regression.xml",
+                "test_opt_cmd_regression.py", "--junitxml=reports/report-opt-cmd-regression.xml"
+            ],
+            "console": "integratedTerminal"
+        },        
         {
             "name": "Run Enhanced API Tests",
             "type": "python",
