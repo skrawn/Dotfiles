@@ -4,6 +4,25 @@
     "configurations": [
 
         {
+            "name": "Ceedling: test_radcal",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/ceedling/build/test/out/test_radcal.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/ceedling",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
@@ -15,8 +34,8 @@
             "externalConsole": true,
             "linux": {                
                 "MIMode": "gdb",
-                "miDebuggerPath": "/opt/poky/2.2.2/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb",
-                "miDebuggerServerAddress": "10.85.4.95:2345",
+                "miDebuggerPath": "/opt/poky/2.3.1/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb",
+                "miDebuggerServerAddress": "10.1.1.11:2345",
                 "setupCommands": [
                     {                        
                         "description": "Enable pretty-printing for gdb",
@@ -24,24 +43,7 @@
                         "ignoreFailures": true
                     }
                 ]
-            }            
-        },
-        {
-            "name": "C++ Attach",
-            "type": "cppdbg",
-            "request": "attach",
-            "program": "{workspaceRoot}/Debug/instrument",
-            "processId": "${command:pickProcess}",
-            "linux": {
-                "MIMode": "gdb",
-                "setupCommands": [
-                    {
-                        "description": "Enable pretty-printing for gdb",
-                        "text": "-enable-pretty-printing",
-                        "ignoreFailures": true
-                    }
-                ]
-            }            
+            }
         }
     ]
 }

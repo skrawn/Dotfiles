@@ -10,19 +10,6 @@
     "suppressTaskName": true,
     "tasks": [
         {
-            "taskName": "build",     
-            "isBuildCommand": true,            
-            "args": [
-                "source /opt/poky/2.2.2/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cd Debug && make"
-            ]
-        },
-        {
-            "taskName": "clean",
-            "args": [
-                "source /opt/poky/2.2.2/environment-setup-armv7ahf-neon-poky-linux-gnueabi; cd Debug; make clean"
-            ]
-        },
-        {
             "taskName": "predebug",
             "args": [
                 "${workspaceRoot}/.vscode/predebug.sh"
