@@ -54,7 +54,6 @@
             "name": "Run Enhanced API Tests",
             "type": "python",
             "request": "launch",
-            "stopOnEntry": true,
             "pythonPath": "${config:python.pythonPath}",
             "program": "/home/sdonohue/virtualenvs/series_5-test_json/lib/python3.6/site-packages/behave/__main__.py",
             "cwd": "${workspaceFolder}/tests/REST/features",
@@ -64,7 +63,11 @@
             "envFile": "${workspaceFolder}/.env",
             "debugOptions": [
                 "RedirectOutput"
-            ]
+            ],
+            "args": [
+                "--tags=-skip"
+            ],
+            "console": "integratedTerminal"
         }
 
     ]
