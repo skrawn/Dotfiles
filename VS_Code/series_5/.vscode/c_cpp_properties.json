@@ -4,9 +4,9 @@
             "name": "Linux",
             "defines": [],
             "includePath": [
-                "/opt/poky/2.3.1/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
-                "/opt/poky/2.3.1/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include/asm-generic",
-                "/opt/poky/2.3.1/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/include",
+                "/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
+                "/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include/asm-generic",
+                "/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.3.0/include",
                 "${workspaceRoot}/controller/application",
                 "${workspaceRoot}/controller/application/httpHandler",
                 "${workspaceRoot}/controller/application/jsonAPI",
@@ -34,9 +34,9 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": "${workspaceRoot}/.vscode/symboldb",
                 "path": [
-                    "/opt/poky/2.3.1/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
-                    "/opt/poky/2.3.1/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/src",
-                    "/opt/poky/2.3.1/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/include",
+                    "/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
+                    "/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/src",
+                    "/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.3.0/include",
                     "${workspaceRoot}"
                 ]
             },
