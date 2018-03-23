@@ -7,7 +7,7 @@
             "name": "Ceedling: test_radcal",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/ceedling/build/test/out/test_radcal.out",
+            "program": "${workspaceFolder}/ceedling/build/test/out/test_signalAnalysis.out",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/ceedling",
@@ -35,14 +35,14 @@
             "linux": {                
                 "MIMode": "gdb",
                 "miDebuggerPath": "/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb",
-                "miDebuggerServerAddress": "10.1.1.11:2345",
+                "miDebuggerServerAddress": "10.85.4.108:2345",
                 "setupCommands": [
-                    {                        
-                        "description": "Enable pretty-printing for gdb",
-                        "text": "-enable-pretty-printing",
-                        "ignoreFailures": true
-                    }
-                ]
+                    { "text": "-enable-pretty-printing", "description": "Enable pretty-printing for gdb", "ignoreFailures": true },
+                    { "text": "set sysroot /opt/poky/2.3.3/sysroots" },
+                    { "text": "set pagination off" },
+                    { "text": "set target-async on" },
+                    { "text": "set non-stop on", "description": "Only the thread being debugged is stopped", "ignoreFailures": true }
+                ],
             }
         }
     ]
