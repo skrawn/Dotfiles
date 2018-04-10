@@ -7,7 +7,7 @@
             "name": "Ceedling: test_radcal",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/ceedling/build/test/out/test_signalAnalysis.out",
+            "program": "${workspaceFolder}/ceedling/build/test/out/test_jsonAPI_Spectrum.out",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/ceedling",
@@ -38,7 +38,6 @@
                 "miDebuggerServerAddress": "10.85.4.108:2345",
                 "setupCommands": [
                     { "text": "-enable-pretty-printing", "description": "Enable pretty-printing for gdb", "ignoreFailures": true },
-                    { "text": "set sysroot /opt/poky/2.3.3/sysroots" },
                     { "text": "set pagination off" },
                     { "text": "set target-async on" },
                     { "text": "set non-stop on", "description": "Only the thread being debugged is stopped", "ignoreFailures": true }

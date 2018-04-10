@@ -5,21 +5,34 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Run Legacy GUI",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "/usr/bin/python3.6",
+            "program": "${workspaceFolder}/fs5test/main_package/main_gui.py",
+            "cwd": "${workspaceFolder}/",
+            "env": {
+                "PYTHONPATH":"${workspaceRoot}"
+            },
+            "debugOptions": [
+            ],
+            "args": [
+            ],
+            "console": "integratedTerminal"
+        },
+        {
             "name": "Run Legacy Sanity Tests",
             "type": "python",
             "request": "launch",
             "pythonPath": "${config:python.pythonPath}",
             "module": "pytest",
             "cwd": "${workspaceFolder}/tests/legacy",
-            "env": {
-                "FS5_SERVER_URL": "http://10.1.1.11"
-            },
             "envFile": "${workspaceFolder}/.env",
             "debugOptions": [
             ],
             "args": [
                 "test_setup_validation_sanity.py", "--junitxml=reports/report-setup-sanity.xml",
-                "test_version_cmd_sanity.py", "--junitxml=reports/report-version-sanity",
+                "test_version_cmd_sanity.py", "--junitxml=reports/report-version-sanity.xml",
                 "test_acquire_cmd_sanity.py", "--junitxml=reports/report-aquire-sanity.xml",
                 "test_collect_cmd_sanity.py", "--junitxml=reports/report-collect-sanity.xml"
 
@@ -33,9 +46,6 @@
             "pythonPath": "${config:python.pythonPath}",
             "module": "pytest",
             "cwd": "${workspaceFolder}/tests/legacy",
-            "env": {
-                "FS5_SERVER_URL": "http://10.1.1.11"
-            },
             "envFile": "${workspaceFolder}/.env",
             "debugOptions": [
             ],
@@ -49,16 +59,115 @@
                 "test_opt_cmd_regression.py", "--junitxml=reports/report-opt-cmd-regression.xml"
             ],
             "console": "integratedTerminal"
-        },        
+        },
+        {
+            "name": "Run Legacy Abort Tests",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
+            "module": "pytest",
+            "cwd": "${workspaceFolder}/tests/legacy",
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+            ],
+            "args": [
+                "test_abort_cmd_regression.py", "--junitxml=reports/report-abort-regression.xml",
+            ],
+            "console": "integratedTerminal"
+        }, 
+        {
+            "name": "Run Network Changes Test",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
+            "module": "pytest",
+            "cwd": "${workspaceFolder}/tests/enhanced",
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+            ],
+            "args": [
+                "test_network_changes_manual.py", "--junitxml=reports/report-network-changes-manual.xml",
+            ],
+            "console": "integratedTerminal"
+        }, 
         {
             "name": "Run Enhanced API Tests",
             "type": "python",
             "request": "launch",
             "pythonPath": "${config:python.pythonPath}",
-            "program": "/home/sdonohue/virtualenvs/series_5-test_json/lib/python3.6/site-packages/behave/__main__.py",
+            "program": "${config:python.venvPath}/${config:python.activeVenv}/lib/python3.6/site-packages/behave/__main__.py",
             "cwd": "${workspaceFolder}/tests/REST/features",
             "env": {
-                "FS5_SERVER_URL": "http://10.1.1.11"
+                "FS5_SERVER_URL": "http://10.85.4.108"
+            },
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+                "RedirectOutput"
+            ],
+            "args": [
+                "calibration.feature",
+                "diagnostics.feature",
+                "errors.feature",
+                "gps.feature",
+                "spectrum.feature",
+                "spectrometer.feature",
+                "storage.feature",
+                "system.feature",
+                "trigger.feature",
+                "version.feature",
+                "--tags=-skip"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Load Cal Files",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${config:python.venvPath}/${config:python.activeVenv}/lib/python3.6/site-packages/behave/__main__.py",
+            "cwd": "${workspaceFolder}/tests/REST/features",
+            "env": {
+                "FS5_SERVER_URL": "http://10.85.4.108"
+            },
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+                "RedirectOutput"
+            ],
+            "args": [
+                "trigger.feature",
+                "--tags=-skip"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run WIP API Tests",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${config:python.venvPath}/${config:python.activeVenv}/lib/python3.6/site-packages/behave/__main__.py",
+            "cwd": "${workspaceFolder}/tests/REST/features",
+            "env": {
+                "FS5_SERVER_URL": "http://10.85.4.108"
+            },
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+                "RedirectOutput"
+            ],
+            "args": [
+                "calibration.feature",
+                "--tags=-skip"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Website Tests",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${config:python.venvPath}/${config:python.activeVenv}/lib/python3.6/site-packages/behave/__main__.py",
+            "cwd": "${workspaceFolder}/tests/website/features",
+            "env": {
+                "FS5_SERVER_URL": "http://10.85.4.108"
             },
             "envFile": "${workspaceFolder}/.env",
             "debugOptions": [
@@ -69,6 +178,5 @@
             ],
             "console": "integratedTerminal"
         }
-
     ]
 }

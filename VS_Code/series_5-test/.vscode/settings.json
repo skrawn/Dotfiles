@@ -1,5 +1,6 @@
 {
-    "python.pythonPath": "/home/sdonohue/virtualenvs/series_5-test_json/bin/python",
+    "python.pythonPath": "/home/sdonohue/virtualenvs/series_5-test/bin/python",
     "python.linting.pylintEnabled": false,
-    "python.venvPath": "/home/sdonohue/virtualenvs"
+    "python.venvPath": "/home/sdonohue/virtualenvs",
+    "python.activeVenv": "series_5-test",
 }
