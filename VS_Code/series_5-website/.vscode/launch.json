@@ -12,6 +12,15 @@
             "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
             "userDataDir": "${workspaceRoot}/.vscode/chrome"
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach Karma Chrome",
+            "address": "localhost",
+            "sourceMaps": true,
+            "port": 9333,
+            "webRoot": "${workspaceFolder}",
         }
     ]
 }
