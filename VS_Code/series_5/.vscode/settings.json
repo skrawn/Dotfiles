@@ -1,7 +1,14 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "cmake.buildDirectory": "${workspaceRoot}/Debug",
-    "cmake.useCMakeServer": false,
+    "cmake.useCMakeServer": true,
+    "cmake.configureArgs": [
+        "-DCMAKE_VERBOSE_MAKEFILE=1"
+    ],
+    "cmake.preferredGenerators": [
+        "Unix Makefiles"
+    ],
+    "cmake.cmakePath": "/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin/cmake",
     "cmake.environment": {
         "AR":"/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ar",
         "ARCH":"arm",
@@ -10,8 +17,6 @@
         "CCACHE":"",
         "CCACHE_PATH":"/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin:/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin/../x86_64-pokysdk-linux/bin:/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi:/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-uclibc:/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-musl",
         "CFLAGS":" --sysroot=/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi",
-        "CMAKE_C_COMPILER":"${TOOLSPATH}/arm-poky-linux-gnueabi-gcc",
-        "CMAKE_CXX_COMPILER":"/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++",
         "CONFIGURE_FLAGS":"--target=arm-poky-linux-gnueabi --host=arm-poky-linux-gnueabi --build=x86_64-linux --with-libtool-sysroot=/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi",
         "CONFIG_SITE":"/opt/poky/2.3.3/site-config-armv7ahf-neon-poky-linux-gnueabi",
         "CPP":"/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc -E  -march=armv7-a -marm -mfpu=neon  -mfloat-abi=hard --sysroot=/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi",
@@ -57,13 +62,16 @@
         "toolchainTriplet":"armv7ahf-neon-poky-linux-gnueabi",
         "TOOLSPATH":"/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi"
     },
-    "cmake.configureArgs": [        
-        "-DCMAKE_VERBOSE_MAKEFILE=1",
-    ],
     "files.associations": {
         "stdlib.h": "c",
         "error.h": "c",
-        "neo_gps.h": "c"
+        "neo_gps.h": "c",
+        "cencode.h": "c",
+        "mock_jsonapi_spectrometer.h": "c",
+        "array": "c",
+        "initializer_list": "c",
+        "utility": "c"
     },
-    "C_Cpp.intelliSenseEngine": "Tag Parser"
+    //"C_Cpp.intelliSenseEngine": "Tag Parser"
+    "C_Cpp.intelliSenseEngine": "Default"
 }

@@ -1,0 +1,6 @@
+[
+  {
+    "name": "arm-poky-linux-gnueabi 6.3.0",
+    "toolchainFile": "${workspaceRoot}/toolchain.cmake"
+  }
+]
