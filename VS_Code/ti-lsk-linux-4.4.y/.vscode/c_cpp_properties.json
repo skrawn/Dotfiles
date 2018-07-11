@@ -1,47 +1,58 @@
 {
     "configurations": [
         {
-            "name": "Mac",
-            "includePath": [
-                "/usr/include",
-                "/usr/local/include"
-            ],
-            "browse": {
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": "",
-                "path": [
-                    "/usr/include",
-                    "/usr/local/include"
-                ]
-            }
-        },
-        {
             "name": "Linux",
             "includePath": [
-                "/usr/include",
-                "/usr/local/include"
+                "${workspaceFolder}/arch/arm/mach-omap2",
+                "${workspaceFolder}/arch/arm/mach-omap2/include",
+                "${workspaceFolder}/arch/arm/mach-omap2/include/mach",
+                "${workspaceFolder}/arch/arm/include",
+                "${workspaceFolder}/arch/arm/include/asm",
+                "${workspaceFolder}/arch/arm/include/asm/hardware",
+                "${workspaceFolder}/arch/arm/include/asm/mach",
+                "${workspaceFolder}/arch/arm/include/asm/xen",
+                "${workspaceFolder}/arch/arm/include/generated",
+                "${workspaceFolder}/arch/arm/include/generated/asm",
+                "${workspaceFolder}/arch/arm/include/uapi",
+                "${workspaceFolder}/arch/arm/include/uapi/asm",
+                "${workspaceFolder}/arch/arm/plat-omap/include",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/include/generated",
+                "${workspaceFolder}/include/generated/uapi",
+                "${workspaceFolder}/include/linux",
+                "${workspaceFolder}/include/uapi",
+                "${workspaceFolder}/include/uapi/linux"
+                
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": "",
                 "path": [
-                    "/usr/include",
-                    "/usr/local/include"
+                    "${workspaceFolder}/arch/arm",
+                    "${workspaceFolder}/block",
+                    "${workspaceFolder}/certs",
+                    "${workspaceFolder}/cypto",
+                    "${workspaceFolder}/drivers",
+                    "${workspaceFolder}/fs",
+                    "${workspaceFolder}/include",
+                    "${workspaceFolder}/init",
+                    "${workspaceFolder}/ipc",
+                    "${workspaceFolder}/kernel",
+                    "${workspaceFolder}/lib",
+                    "${workspaceFolder}/mm",
+                    "${workspaceFolder}/net",
+                    "${workspaceFolder}/samples",
+                    "${workspaceFolder}/security",
+                    "${workspaceFolder}/sound"
                 ]
-            }
-        },
-        {
-            "name": "Win32",
-            "includePath": [
-                "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include/*"
-            ],
-            "browse": {
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": "",
-                "path": [
-                    "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include/*"
-                ]
-            }
+            },
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c99",
+            "defines": [
+                "__KERNEL__",
+                "CONFIG_ARCH_OMAP", "CONFIG_ARCH_OMAP3", "CONFIG_HZ=100", "CONFIG_ARM_ERRATA_430973"
+            ]
         }
-    ]
+    ],
+    "version": 4
 }

@@ -4,12 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Run Legacy GUI",
             "type": "python",
             "request": "launch",
-            "pythonPath": "/usr/bin/python3.6",
-            "program": "${workspaceFolder}/fs5test/main_package/main_gui.py",
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${workspaceFolder}/fs5test/main_package/main_enhanced.py",
             "cwd": "${workspaceFolder}/",
             "env": {
                 "PYTHONPATH":"${workspaceRoot}"
@@ -98,7 +99,7 @@
             "program": "${config:python.venvPath}/${config:python.activeVenv}/lib/python3.6/site-packages/behave/__main__.py",
             "cwd": "${workspaceFolder}/tests/REST/features",
             "env": {
-                "FS5_SERVER_URL": "http://10.85.4.108"
+                "FS5_SERVER_URL": "http://192.168.7.2"
             },
             "envFile": "${workspaceFolder}/.env",
             "debugOptions": [
@@ -111,7 +112,6 @@
                 "gps.feature",
                 "spectrum.feature",
                 "spectrometer.feature",
-                "storage.feature",
                 "system.feature",
                 "trigger.feature",
                 "version.feature",
@@ -154,7 +154,7 @@
                 "RedirectOutput"
             ],
             "args": [
-                "calibration.feature",
+                "wip.feature",
                 "--tags=-skip"
             ],
             "console": "integratedTerminal"
@@ -166,15 +166,69 @@
             "pythonPath": "${config:python.pythonPath}",
             "program": "${config:python.venvPath}/${config:python.activeVenv}/lib/python3.6/site-packages/behave/__main__.py",
             "cwd": "${workspaceFolder}/tests/website/features",
-            "env": {
-                "FS5_SERVER_URL": "http://10.85.4.108"
-            },
-            "envFile": "${workspaceFolder}/.env",
             "debugOptions": [
                 "RedirectOutput"
             ],
             "args": [
                 "--tags=-skip"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Website Calibration Tests",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${config:python.venvPath}/${config:python.activeVenv}/lib/python3.6/site-packages/behave/__main__.py",
+            "cwd": "${workspaceFolder}/tests/website/features",
+            "debugOptions": [
+                "RedirectOutput"
+            ],
+            "args": [
+                "system.feature",
+                "--tags=-skip"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Mobile Tests",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${config:python.venvPath}/${config:python.activeVenv}/lib/python3.6/site-packages/behave/__main__.py",
+            "cwd": "${workspaceFolder}/tests/mobile/features",
+            "debugOptions": [
+                "RedirectOutput"
+            ],
+            "args": [
+                "--tags=-skip"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Android Mobile Tests",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${config:python.venvPath}/${config:python.activeVenv}/lib/python3.6/site-packages/behave/__main__.py",
+            "cwd": "${workspaceFolder}/tests/android/features",
+            "debugOptions": [
+                "RedirectOutput"
+            ],
+            "args": [
+                "--tags=-skip"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Firmware Update",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${workspaceFolder}/tests/utils/upload_fw_image.py",
+            "cwd": "${workspaceFolder}",
+            "debugOptions": [
+                "RedirectOutput"
             ],
             "console": "integratedTerminal"
         }

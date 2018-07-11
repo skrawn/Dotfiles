@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Appium",
+            "type": "shell",
+            "windows": {
+                "command": "appium --chromedriver-executable 'C:\\ChromeDriver\\chromedriver.exe'"    
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Install ASD FS Windows",
+            "type": "shell",
+            "windows": {
+                "command": "python ${workspaceRoot}/tests/utils/install_mobile.py",
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "new"
+            }
+        }
+    ]
+}

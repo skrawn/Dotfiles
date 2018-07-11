@@ -70,7 +70,11 @@
         "mock_jsonapi_spectrometer.h": "c",
         "array": "c",
         "initializer_list": "c",
-        "utility": "c"
+        "utility": "c",
+        "chrono": "c",
+        "ratio": "c",
+        "type_traits": "c",
+        "*.ch": "c"
     },
     //"C_Cpp.intelliSenseEngine": "Tag Parser"
     "C_Cpp.intelliSenseEngine": "Default"

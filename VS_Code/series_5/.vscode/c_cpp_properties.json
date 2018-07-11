@@ -5,7 +5,9 @@
             "defines": [],
             "includePath": [
                 "/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
+                "/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include/asm",
                 "/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include/asm-generic",
+                "/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include/bits",
                 "/opt/poky/2.3.3/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.3.0/include",
                 "${workspaceRoot}/controller/application",
                 "${workspaceRoot}/controller/application/httpHandler",
@@ -28,11 +30,12 @@
                 "${workspaceRoot}/view/gps",
                 "${workspaceRoot}/view/hardware",
                 "${workspaceRoot}/view/usb",
-                "${workspaceRoot}/view/wifi"
+                "${workspaceRoot}/view/wifi",
+                "${workspaceFolder}/ceedling/vendor/ceedling/vendor/unity/src"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": "${workspaceRoot}/.vscode/symboldb",
+                "databaseFilename": "",
                 "path": [
                     "/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/include",
                     "/opt/poky/2.3.3/sysroots/armv7ahf-neon-poky-linux-gnueabi/usr/src",
@@ -43,5 +46,5 @@
             "intelliSenseMode": "clang-x64"
         }
     ],
-    "version": 3
+    "version": 4
 }

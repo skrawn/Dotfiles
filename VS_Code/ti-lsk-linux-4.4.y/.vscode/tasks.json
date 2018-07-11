@@ -7,8 +7,8 @@
     "isShellCommand": true,
     "args": [ "-c" ],
     "options": {
-        "env": {            
-            "LOADADDR": "0x82000000"            
+        "env": {
+            "LOADADDR": "0x82000000"
         }
     },
     "showOutput": "always",
@@ -19,19 +19,25 @@
             "taskName": "build",
             "isBuildCommand": true,            
             "args": [
-                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; make -j8 uImage"
+                "source /opt/poky/2.3.3/environment-setup-armv7ahf-neon-poky-linux-gnueabi; make -j8 uImage"
+            ]
+        },
+        {
+            "taskName": "dtbs",
+            "args": [
+                "source /opt/poky/2.3.3/environment-setup-armv7ahf-neon-poky-linux-gnueabi; make dtbs"
             ]
         },
         {
             "taskName": "clean",
             "args": [
-                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; make clean"
+                "source /opt/poky/2.3.3/environment-setup-armv7ahf-neon-poky-linux-gnueabi; make clean"
             ]
         },
         {
             "taskName": "modules",
             "args": [
-                "source /opt/poky/2.2.1/environment-setup-armv7ahf-neon-poky-linux-gnueabi; make -j8 modules"
+                "source /opt/poky/2.3.3/environment-setup-armv7ahf-neon-poky-linux-gnueabi; make -j8 modules"
             ]
         }
     ]    
